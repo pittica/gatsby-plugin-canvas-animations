@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 
+import { rgb } from "./utils"
+
 let opacity = 0
 
 export default class LedwallCanvas extends Component {
@@ -39,7 +41,7 @@ export default class LedwallCanvas extends Component {
 
       let x = this.props.gutter
       let y = this.props.gutter
-      const { r, g, b } = this.rgba(this.props.primary)
+      const { r, g, b } = rgb(this.props.primary)
 
       for (x; x < canvas.width; x += this.props.width + this.props.gutter) {
         for (y; y < canvas.height; y += this.props.height + this.props.gutter) {
@@ -64,30 +66,6 @@ export default class LedwallCanvas extends Component {
 
         y = this.props.gutter
       }
-    }
-  }
-
-  rgba(hex) {
-    let r,
-      g,
-      b = 0
-
-    if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
-      let c = hex.substring(1).split("")
-
-      if (c.length == 3) {
-        c = [c[0], c[0], c[1], c[1], c[2], c[2]]
-      }
-      c = "0x" + c.join("")
-      r = (c >> 16) & 255
-      g = (c >> 8) & 255
-      b = c & 255
-    }
-
-    return {
-      r,
-      g,
-      b,
     }
   }
 
