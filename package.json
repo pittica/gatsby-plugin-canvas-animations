@@ -1,0 +1,37 @@
+{
+  "name": "@pittica/gatsby-plugin-canvas-animations",
+  "private": false,
+  "description": "Canvas animations collection for GatsbyJS.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lucio Benini",
+    "email": "info@pittica.com",
+    "url": "https://pittica.com"
+  },
+  "bugs": {
+    "url": "https://github.com/pittica/gatsby-plugin-canvas-animations/issues"
+  },
+  "deprecated": false,
+  "homepage": "https://github.com/pittica/gatsby-plugin-canvas-animations",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "canvas",
+    "animations"
+  ],
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "gatsby": "^2.21.22",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pittica/gatsby-plugin-canvas-animations.git"
+  }
+}
