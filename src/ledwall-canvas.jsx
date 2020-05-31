@@ -10,13 +10,13 @@ export default class LedwallCanvas extends Component {
     const canvas = this.refs.canvas
 
     if (typeof window !== "undefined") {
-      canvas.width = canvas.parentNode.parentNode.clientWidth
-      canvas.height = canvas.parentNode.parentNode.clientHeight
-
+      canvas.width = canvas.parentNode.clientWidth
+      canvas.height = canvas.parentNode.clientHeight
+  
       window.addEventListener("resize", () => {
-        canvas.width = canvas.parentNode.parentNode.clientWidth
-        canvas.height = canvas.parentNode.parentNode.clientHeight
-
+        canvas.width = canvas.parentNode.clientWidth
+        canvas.height = canvas.parentNode.clientHeight
+  
         this.draw(canvas)
       })
     } else {

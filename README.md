@@ -21,3 +21,7 @@ npm install @pittica/gatsby-plugin-canvas-animations
 ## Copyright
 
 (c) 2020, Pittaca S.r.l.s.
+
+### Cube Animations
+
+Cube animations based on [webgl-examples](https://github.com/mdn/webgl-examples) by [Mozilla Developer Network](https://github.com/mdn).
