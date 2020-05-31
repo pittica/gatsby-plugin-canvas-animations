@@ -2,7 +2,7 @@
   "name": "@pittica/gatsby-plugin-canvas-animations",
   "private": false,
   "description": "Canvas animations collection for GatsbyJS.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": {
     "name": "Lucio Benini",
     "email": "info@pittica.com",
@@ -20,7 +20,8 @@
     "animations"
   ],
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "gl-mat4": "^1.2.0"
   },
   "devDependencies": {
     "gatsby": "^2.21.22",
