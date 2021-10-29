@@ -10,3 +10,6 @@ decls
 examples
 .gitattributes
 gatsby-plugin-canvas-animations.code-workspace
+.prettierignore
+.prettierrc
+src
