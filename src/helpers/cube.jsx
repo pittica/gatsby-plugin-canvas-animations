@@ -1,6 +1,6 @@
 import mat4 from "gl-mat4"
+import { hexToRgb } from "@pittica/gatsby-plugin-utils"
 
-import rgb from "../utils/rgb"
 import { program } from "../utils/shader"
 import { create, vertex } from "../utils/buffer"
 import { cube, indices } from "../utils/positions"
@@ -44,7 +44,7 @@ export function info(context) {
 }
 
 export function colors(color) {
-  const { r, g, b } = rgb(color, true)
+  const { r, g, b } = hexToRgb(color, true)
 
   return {
     front: [r, g, b, 1.0],
@@ -119,7 +119,7 @@ export function apply(context, programInfo, buffers, rotation) {
 }
 
 export function prepare(context, background) {
-  const { r, g, b } = rgb(background, true)
+  const { r, g, b } = hexToRgb(background, true)
 
   context.clearColor(r, g, b, 1.0)
   context.clearDepth(1.0)

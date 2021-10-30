@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react"
 import PropTypes from "prop-types"
 import useInterval from "react-useinterval"
+import { hexToRgb } from "@pittica/gatsby-plugin-utils"
 
-import rgb from "../utils/rgb"
 import { create, draw } from "../helpers/rain"
 
 export default function Rain({ color, stroke, parts, timing }) {
@@ -16,7 +16,7 @@ export default function Rain({ color, stroke, parts, timing }) {
       canvas.height = window.innerHeight
 
       if (canvas.getContext) {
-        const { r, g, b } = rgb(color)
+        const { r, g, b } = hexToRgb(color)
         const context = canvas.getContext("2d")
 
         context.fillStyle = `rgba(${r}, ${g}, ${b}, 0.5)`

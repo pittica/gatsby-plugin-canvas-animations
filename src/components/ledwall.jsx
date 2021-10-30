@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react"
 import PropTypes from "prop-types"
 import useInterval from "react-useinterval"
+import { hexToRgb } from "@pittica/gatsby-plugin-utils"
 
-import rgb from "../utils/rgb"
 import { randomize } from "../helpers/ledwall"
 
 export default function Ledwall({
@@ -56,7 +56,7 @@ export default function Ledwall({
       context.lineWidth = lineWidth
       context.lineCap = "round"
 
-      const { r, g, b } = rgb(primary)
+      const { r, g, b } = hexToRgb(primary)
       let x = gutter
       let y = gutter
       let alpha = opacity
