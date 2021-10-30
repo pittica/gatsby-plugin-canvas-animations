@@ -13,12 +13,11 @@ export default function Cube({ color, background }) {
       canvas.width = canvas.parentNode.clientWidth
       canvas.height = canvas.parentNode.clientWidth
 
-      window.addEventListener("resize", () => {
-        canvas.width = canvas.parentNode.clientWidth
-        canvas.height = canvas.parentNode.clientWidth
+      window.addEventListener("resize", resize)
+      
+      draw()
 
-        draw()
-      })
+      return () => window.removeEventListener("resize", resize)
     } else {
       canvas.width = 1920
       canvas.height = 1080
@@ -26,6 +25,15 @@ export default function Cube({ color, background }) {
 
     draw()
   }, [])
+
+  const resize = () => {
+    const canvas = ref.current
+
+    canvas.width = canvas.parentNode.clientWidth
+    canvas.height = canvas.parentNode.clientHeight
+
+    draw()
+  }
 
   const draw = () => {
     const canvas = ref.current
