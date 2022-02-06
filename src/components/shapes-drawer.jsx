@@ -44,7 +44,7 @@ export default function ShapesDrawer({ shapes, stroke, fill, timing }) {
       }
     }
   }, play)
-  
+
   const init = () => {
     if (typeof window !== "undefined") {
       const canvas = ref.current
