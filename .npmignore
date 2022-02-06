@@ -9,6 +9,7 @@ coverage
 decls
 examples
 .gitattributes
+.github
 gatsby-plugin-canvas-animations.code-workspace
 .prettierignore
 .prettierrc
